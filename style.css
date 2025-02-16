@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Body styling */
@@ -36,11 +36,13 @@ body {
     list-style: none;
     color:gray;
     opacity: 50;
+    font-size: 18px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: #e5e7eb;
+    opacity: 50;
     font-size: 16px;
 }
 
@@ -65,6 +67,8 @@ body {
 .hero-text h1 {
     font-size: 48px;
     font-weight: bold;
+    color: #f9faf8;
+    font-weight: 900;
 }
 
 .hero-text p {
@@ -73,6 +77,7 @@ body {
 }
 
 .hero-text button {
+    width: 200px;
     background-color: #3882f6;
     color: white;
     padding: 10px 20px;
@@ -85,13 +90,15 @@ body {
 
 /* Hero image placeholder */
 .hero-image {
-    width: 40%;
+    width: 200;
+    height: 100;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 10;
 }
 
-/* Placeholder for the hero image */
+/* Format for the hero image. Keeps textbox placeholder dimensions*/
 .image-placeholder {
     background-color: gray;
     width: 400px;
@@ -110,8 +117,10 @@ body {
 }
 
 .info h2 {
-    font-size: 32px;
+    font-size: 36px;
+    color: #1f2937;
     margin-bottom: 20px;
+    font-weight: 900;
 }
 
 /* Flexbox for evenly spaced info boxes */
@@ -132,7 +141,7 @@ body {
     max-width: 150px;
 }
 
-/* Placeholder for small images */
+/* Style for small images */
 .info-image {
     width: 100px;
     height: 100px;
@@ -142,20 +151,21 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    /* Add actual images here */
     background-color: white;
 }
 
-/* Testimonial section */
+/* Testimonial se ction */
 .testimonial {
     background-color: #e5e7eb;
     padding: 60px 15%;
-    text-align: center;
+    text-align: left;
     font-style: italic;
-    font-size: 20px;
+    font-size: 36px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #1f2937;
+    font-weight: lighter;
 }
 
 .testimonial cite {
@@ -163,6 +173,7 @@ body {
     font-style: normal;
     display: block;
     margin-top: 10px;
+    text-align: right;
 }
 
 /* Call-to-action section */
@@ -178,9 +189,18 @@ body {
     margin: 40px 0;
 }
 
-.cta-text {
+.cta-container {
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    align-items: center; /* Align items vertically centered */
+}
+
+.cta-text {
+    flex-grow: 3; /* Takes up 3/4ths of the container */
+}
+
+.cta h3, .cta p {
+    margin: 0; /* Remove default margin */
 }
 
 .cta h3 {
@@ -189,14 +209,20 @@ body {
 }
 
 .cta button {
-    background-color: white;
-    color: #3882f6;
+    background-color: #3882f6;
+    color: white;
     padding: 10px 20px;
     font-size: 18px;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid white;
+    border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+}
+
+/* Align the button to the right quarter of the container */
+.right-quarter-button {
+    flex-grow: 1; /* Allow the button to take up its share of the space */
+    margin-left: auto; /* Push the button to the right */
 }
 
 /* Footer */
